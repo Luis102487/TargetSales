@@ -1,4 +1,4 @@
-# Walmart Sales Analysis
+# Walmart Customer Behavior Analysis
 
 ## About
 
