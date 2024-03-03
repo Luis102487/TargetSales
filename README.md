@@ -2,10 +2,12 @@
 
 ## Purposes Of The Project
 
-The major aim of thie project is to gain insight into the sales data of Walmart to understand customer behavior. The dataset was obtained from the (https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
+The major aim of thie project is to gain insight into the sales data of Walmart to understand customer behavior. This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
+ 
 
 ## About Data
 
+The dataset was obtained from the (https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 This dataset contains sales transactions from a three different branches of Walmart, respectively located in Mandalay, Yangon and Naypyitaw. The data contains 17 columns and 1000 rows:
 
 | Column                  | Description                             | Data Type      |
@@ -28,17 +30,13 @@ This dataset contains sales transactions from a three different branches of Walm
 | gross_income            | Gross Income                            | DECIMAL(10, 2) |
 | rating                  | Rating                                  | FLOAT(2, 1)    |
 
-### Analysis List
 
-3. Customer Analysis
-
-> This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
 
 ## Approach Used
 
 1. **Data Wrangling:** This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
 
-> 1. Build a database
+> * Build a database
 > 2. Create table and insert the data.
 > 3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set **NOT NULL** for each field, hence null values are filtered out.
 
