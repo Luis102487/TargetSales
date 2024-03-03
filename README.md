@@ -1,13 +1,8 @@
 # Walmart Customer Behavior Analysis
 
-## About
-
-This analysis explores Walmart sales data to understand top performing branches and products, sales trend of of different products, customer behaviour. The aims is to study how sales strategies can be improved and optimized. 
-The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
-
 ## Purposes Of The Project
 
-The major aim of thie project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
+The major aim of thie project is to gain insight into the sales data of Walmart to understand customer behavior. The dataset was obtained from the (https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 
 ## About Data
 
@@ -34,14 +29,6 @@ This dataset contains sales transactions from a three different branches of Walm
 | rating                  | Rating                                  | FLOAT(2, 1)    |
 
 ### Analysis List
-
-1. Product Analysis
-
-> Conduct analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
-
-2. Sales Analysis
-
-> This analysis aims to answer the question of the sales trends of product. The result of this can help use measure the effectiveness of each sales strategy the business applies and what modificatoins are needed to gain more sales.
 
 3. Customer Analysis
 
