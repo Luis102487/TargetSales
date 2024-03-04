@@ -59,5 +59,9 @@ SET
 WHERE
   month IS NULL;
 
-
-
+-------------- Exploratory questions
+--How many unique customers does the data set have?
+SELECT
+  DISTINCT customer_type
+FROM
+  luisalva.walmart_dataset.walmart_sales;
