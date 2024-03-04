@@ -37,16 +37,27 @@ SET
     )
  WHERE time_of_day IS NULL;
 
--------------- Create day_name column
+-------------- Create day_of_week column
 ALTER TABLE luisalva.walmart_dataset.walmart_sales 
-	ADD COLUMN day_name STRING;
+	ADD COLUMN day_of_week STRING;
 
 UPDATE
   luisalva.walmart_dataset.walmart_sales
 SET
-  day_name = format_date('%A', date)
+  day_of_week = format_date('%A', date)
 WHERE
-  day_name IS NULL;
+  day_of_week IS NULL;
+
+-------------- Create month column
+ALTER TABLE luisalva.walmart_dataset.walmart_sales 
+	ADD COLUMN month STRING;  
+
+UPDATE
+  luisalva.walmart_dataset.walmart_sales
+SET
+  month = format_date('%B', date)
+WHERE
+  month IS NULL;
 
 
 
