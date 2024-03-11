@@ -2,7 +2,7 @@
 
 ## Purposes Of The Project
 
-The major aim of thie project is to gain insight into the sales data of Walmart to understand customer behavior. This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
+The aim of the project is to gain insight into the sales data of Walmart to understand customer behavior. This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
  
 
 ## About Data
@@ -60,18 +60,21 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
 6. What is the most selling product line by gender?
 7. What product line had the largest revenue?
 8. Which customer type buys the most?
-9. Which customer type pays the most in VAT?
-10. What product line had the largest VAT?
-11. Which of the customer types brings the most revenue?
-12. What is the gender of most of the customers?
-13. What is the most common product line by gender?
-14. How many unique cities does the data have?
-15. What is the gender distribution per city?
-16. How many unique product lines does the data have?
-17. Which time of the day do customers give most ratings?
-18. Which day fo the week has the best avg ratings?
-19. What is the average rating of each product line?
-20. Number of sales made in each time of the day per weekday
+9. Which customer type produces the largest revenue?
+10. Which customer type pays the most in VAT?
+11. What product line had the largest VAT?
+12. Which of the customer types brings the most revenue?
+13. What is the gender of most of the customers?
+14. What is the most common product line by gender?
+15. How many unique cities does the data have?
+16. What is the gender distribution per city?
+17. How many unique product lines does the data have?
+18. Which time of the day do customers give most ratings?
+19. Which day fo the week has the best avg ratings?
+20. What is the average rating of each product line?
+21. Number of sales made in each time of the day per weekday
+22. Which branch sold more products than average product sold?
+23. Quantiy sold by gender?
    
 
 
