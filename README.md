@@ -1,5 +1,8 @@
 # Walmart Customer Behavior Analysis
 
+Create more complex queries that would give us better insights.
+There are too many simple group by
+
 ## Purposes Of The Project
 
 The aim of the project is to gain insight into the sales data of Walmart to understand customer behavior. This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
