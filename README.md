@@ -78,6 +78,26 @@ Exploratory data analysis is done to answer the listed questions and aims of thi
 21. Number of sales made in each time of the day per weekday
 22. Which branch sold more products than average product sold?
 23. Quantiy sold by gender?
+
+
+ How many unique customers does the data set have?
+ How many customers per city?
+ How many unique customer types does the data set have?
+ What is the most common customer type?
+ What is the most common payment method?
+ Which customer type buys the most?
+ Which customer type produces the largest revenue?
+ What is the most selling product line?
+ What is the most selling product line by gender?
+ What is the product line where women spend the most money?
+ What is the product line where men spend the most money?
+ What is the gender that spends the most money?
+ What is the customer type that spends the most money?
+ What is the product line that makes the most money?
+ What does normal/member customer spend ost oney on? What product line?
+ 
+
+
    
 
 
