@@ -59,9 +59,97 @@ SET
 WHERE
   month IS NULL;
 
+
 -------------- Exploratory questions
---How many unique customers does the data set have?
+  --Exploratory Analysis
+  ---How many nunique purchases/customers does the dataset has?
+SELECT
+  COUNT (DISTINCT invoice_id)
+FROM
+  luisalva.walmart_dataset.walmart_sales;
+  ---How many unique cities does the dataset has?
+
+SELECT
+  DISTINCT city
+FROM
+  luisalva.walmart_dataset.walmart_sales;
+
+  ---Purchases by city
+SELECT
+  city,
+  COUNT(invoice_id) AS purchases
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  city
+ORDER BY
+  purchases DESC;
+
+  ---How many customers types does the data has?
 SELECT
   DISTINCT customer_type
 FROM
   luisalva.walmart_dataset.walmart_sales;
+
+  --- How many product lines does the data has?
+SELECT
+  DISTINCT product_line
+FROM
+  luisalva.walmart_dataset.walmart_sales;
+
+  --- Worst performing product lines by purchases
+SELECT
+  product_line,
+  COUNT(invoice_id) AS purchases
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  product_line
+ORDER BY
+  purchases;
+
+  --- Worst performing product line by quantity purchase?
+SELECT
+  product_line,
+  SUM(quantity) AS quantity_purchased
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  product_line
+ORDER BY
+  quantity_purchased;
+
+  --- Worst performing product line by total money spent
+SELECT
+  product_line,
+  ROUND(SUM(total), 2) AS total_spent
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  product_line
+ORDER BY
+  total_spent;
+
+  --- Worst performing product line by gross income
+SELECT
+  product_line,
+  ROUND(SUM(gross_income), 2) AS total_gross_income
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  product_line
+ORDER BY
+  total_gross_income;
+  
+  --- Worst performing product line by city
+SELECT
+  city,
+  product_line,
+  COUNT(invoice_id) AS purchases
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  city,
+  product_line
+ORDER BY
+  purchases
