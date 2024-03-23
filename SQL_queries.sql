@@ -108,7 +108,7 @@ GROUP BY
 ORDER BY
   purchases;
 
-  --- Worst performing product line by quantity purchase?
+  --- Worst performing product line by quantity purchase
 SELECT
   product_line,
   SUM(quantity) AS quantity_purchased
@@ -119,16 +119,6 @@ GROUP BY
 ORDER BY
   quantity_purchased;
 
-  --- Worst performing product line by total money spent
-SELECT
-  product_line,
-  ROUND(SUM(total), 2) AS total_spent
-FROM
-  luisalva.walmart_dataset.walmart_sales
-GROUP BY
-  product_line
-ORDER BY
-  total_spent;
 
   --- Worst performing product line by gross income
 SELECT
@@ -153,3 +143,26 @@ GROUP BY
   product_line
 ORDER BY
   purchases
+
+
+  --- Worst performing product line by total money spent
+SELECT
+  product_line,
+  ROUND(SUM(total), 2) AS total_spent
+FROM
+  luisalva.walmart_dataset.walmart_sales
+GROUP BY
+  product_line
+ORDER BY
+  total_spent;
+
+  --- Product line under the average product line total spent
+WITH total_product_line as (SELECT product_line, ROUND(SUM(total), 2) AS total_spent
+FROM luisalva.walmart_dataset.walmart_sales
+GROUP BY product_line)
+
+SELECT product_line, total_spent 
+FROM total_product_line
+WHERE total_spent < (SELECT AVG(total_spent)
+               FROM total_product_line)
+ORDER BY total_spent;
