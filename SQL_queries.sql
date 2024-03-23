@@ -67,14 +67,16 @@ SELECT
   COUNT (DISTINCT invoice_id)
 FROM
   luisalva.walmart_dataset.walmart_sales;
-  ---How many unique cities does the dataset has?
 
+
+---How many unique cities does the dataset has?
 SELECT
   DISTINCT city
 FROM
   luisalva.walmart_dataset.walmart_sales;
 
-  ---Purchases by city
+
+---Purchases by city
 SELECT
   city,
   COUNT(invoice_id) AS purchases
@@ -85,19 +87,22 @@ GROUP BY
 ORDER BY
   purchases DESC;
 
-  ---How many customers types does the data has?
+
+---How many customers types does the data has?
 SELECT
   DISTINCT customer_type
 FROM
   luisalva.walmart_dataset.walmart_sales;
 
-  --- How many product lines does the data has?
+
+--- How many product lines does the data has?
 SELECT
   DISTINCT product_line
 FROM
   luisalva.walmart_dataset.walmart_sales;
 
-  --- Worst performing product lines by purchases
+
+--- Worst performing product lines by purchases made
 SELECT
   product_line,
   COUNT(invoice_id) AS purchases
@@ -108,7 +113,8 @@ GROUP BY
 ORDER BY
   purchases;
 
-  --- Worst performing product line by quantity purchase
+
+--- Worst performing product line by quantity of items purchase
 SELECT
   product_line,
   SUM(quantity) AS quantity_purchased
@@ -120,7 +126,7 @@ ORDER BY
   quantity_purchased;
 
 
-  --- Worst performing product line by gross income
+--- Worst performing product line by gross income
 SELECT
   product_line,
   ROUND(SUM(gross_income), 2) AS total_gross_income
@@ -131,7 +137,8 @@ GROUP BY
 ORDER BY
   total_gross_income;
   
-  --- Worst performing product line by city
+
+--- Worst performing product line by city
 SELECT
   city,
   product_line,
@@ -145,7 +152,7 @@ ORDER BY
   purchases
 
 
-  --- Worst performing product line by total money spent
+--- Worst performing product line by total money spent
 SELECT
   product_line,
   ROUND(SUM(total), 2) AS total_spent
@@ -156,7 +163,8 @@ GROUP BY
 ORDER BY
   total_spent;
 
-  --- Product line under the average product line total spent
+
+--- Product line under the average product line total spent
 WITH total_product_line as (SELECT product_line, ROUND(SUM(total), 2) AS total_spent
 FROM luisalva.walmart_dataset.walmart_sales
 GROUP BY product_line)
