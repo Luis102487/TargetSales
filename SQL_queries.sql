@@ -174,3 +174,16 @@ FROM total_product_line
 WHERE total_spent < (SELECT AVG(total_spent)
                FROM total_product_line)
 ORDER BY total_spent;
+
+--- Total money spent month to month, Average money spent month to month, Count of purchases month to month
+SELECT month, ROUND (SUM(total), 2) AS total_spent, ROUND (AVG(total), 2) AS average_count,  COUNT(total) AS purchase_count
+FROM luisalva.walmart_dataset.walmart_sales
+GROUP BY month;
+
+--- Trend of total spent by each product line month to month 
+--- Average spent by customer 
+--- Average spent by costumer on each product line.
+
+
+
+
